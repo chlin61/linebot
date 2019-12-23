@@ -39,7 +39,7 @@ def callback():
 def handle_message(event):
     line_bot_api.reply_message(
         msg = event.message.text
-        if msg = '你好':
+        if msg == '你好':
             remsg = '今天天氣真好啊'
         else:
             remsg = '你很煩'
