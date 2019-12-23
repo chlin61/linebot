@@ -38,8 +38,13 @@ def callback():
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
     line_bot_api.reply_message(
+        msg = event.message.text
+        if msg = '你好':
+            remsg = '今天天氣真好啊'
+        else
+            remsg = '你很煩'
         event.reply_token,
-        TextSendMessage(text=event.message.text)) # 回復使用者傳來的訊息  就回傳什麼
+        TextSendMessage(text=remsg)) # 回復使用者傳來的訊息  就回傳什麼
 
 
 if __name__ == "__main__":
